@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Orbit: an interactive, rule-based chat companion.">
+    <link rel="stylesheet" href="./style.css">
+
+  <title>CHAT BOT — Let's talk</title>
+</head>
+<body>
+  <main class="app">
+    <!-- Header -->
+    <header>
+      <div class="logo" aria-hidden="true">✳</div>
+
+      <div class="brand">
+        <h1>CHAT BOT</h1>
+        <p>Your little chat companion</p>
+      </div>
+
+      <button id="reset" class="secondary">
+        New chat
+      </button>
+
+      <button
+        id="theme"
+        class="secondary"
+        aria-label="Switch to light mode"
+      >
+        ☀
+      </button>
+    </header>
+
+    <!-- Conversation area -->
+    <section id="conversation" aria-label="Conversation">
+      <div id="welcome">
+        <p class="eyebrow">
+          A LITTLE CURIOSITY GOES A LONG WAY
+        </p>
+
+        <h2>
+          Hello there.<br>
+          <span>Let's talk.</span>
+        </h2>
+
+        <p class="intro">
+          A question, a fresh idea, or a little motivation.<br>
+          Where shall we start?
+        </p>
+
+        <div class="suggestions">
+          <button data-prompt="What is HTML?">
+            <b>⌘ Explore coding</b>
+            <span>Start with the building blocks</span>
+          </button>
+
+          <button data-prompt="Give me a study plan">
+            <b>◎ Make a plan</b>
+            <span>One small step for today</span>
+          </button>
+
+          <button data-prompt="Motivate me">
+            <b>✦ Find your momentum</b>
+            <span>A little encouragement</span>
+          </button>
+
+          <button data-prompt="Tell me a joke">
+            <b>☺ Take a break</b>
+            <span>Something to make you smile</span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="messages"
+        role="log"
+        aria-live="polite"
+        aria-relevant="additions"
+        aria-label="Messages"
+      ></div>
+    </section>
+
+    <!-- Message input -->
+    <footer>
+      <form id="chat-form">
+        <input
+          id="input"
+          aria-label="Your message"
+          placeholder="Ask something..."
+          maxlength="1000"
+          autocomplete="off"
+        >
+
+        <button id="send" type="submit" disabled>
+          Send
+        </button>
+      </form>
+
+      <p class="note">
+        Rule-based demo · No AI connected · Messages stay on this page
+      </p>
+    </footer>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
